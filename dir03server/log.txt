@@ -27,3 +27,6 @@
 1699034563386 /about?name=rajat&id=113
 1699034613836 /?name=rajat&id=113
 1699035336051 /results?search_query=tic+tac+toe+with+javascript
+1699070734586 /
+1699070734703 /favicon.ico
+1699070784918 /?name=rajat&id=113
