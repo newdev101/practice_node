@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>URL SHORTNER</title>
+</head>
+<body>
+     <div class="title"><h1>URL SHORTENER</h1></div>
+     <% if (locals.shortId) { %>
+          <div class="generted_result">
+               <p>your url is:</p>
+               <p>http://localhost:8001/<%= shortId%></p>
+          </div>
+     <% } %>
+     <div class="input_form">
+          <form action="/url" method="post">
+               <p>plz input your url:</p>
+               <input type="text" name="url" required  placeholder="www.google.com">
+               <button type="submit">generate</button>
+          </form>
+     </div>
+     
+</body>
+</html>
