@@ -18,9 +18,7 @@ async function handleGenerateUrl(req, res) {
   console.log(url);
   console.log("url created");
   // return res.json({new_url:`http://localhost:8001/${shortId}`});
-  return res.render('home',{
-    shortId:shortId,
-  });
+  return res.redirect('/');
 }
 
 module.exports = {
