@@ -10,10 +10,9 @@ async function handleUserSignup(req, res) {
      const user = await USER.create({name, email, password});
 
      //setting the cookie for the user
-     const sessionId=uuidv4();
-     setUser(sessionId,user);
-     res.cookie("uid",sessionId);
-
+    
+     const token = setUser(user);
+     res.cookie("uid",token);
      return res.redirect('/');
 }
 async function handleUserLogin(req, res) {
@@ -23,9 +22,12 @@ async function handleUserLogin(req, res) {
 
 
      //setting the cookie for user
-     const sessionId=uuidv4();
-     setUser(sessionId,user);
-     res.cookie("uid",sessionId);
+     // const sessionId=uuidv4();
+     // setUser(sessionId,user);
+     // res.cookie("uid",sessionId);
+  
+     const token = setUser(user);
+     res.cookie("uid",token);
 
      return res.redirect('/');
 }

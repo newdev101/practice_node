@@ -4,7 +4,7 @@ const URL = require("../models/url");
 
 // REDIRECT
 async function handleRedirectUrl(req, res) {
-  console.log("new redirect request");
+  console.log(`new redirect request =${req.url}`);
   if(req.url=="/favicon.ico") return res.end();
   const shortId = req.params.id;
   console.log(`redirect req with id = ${shortId}`);
@@ -29,7 +29,7 @@ async function handleRedirectUrl(req, res) {
 
     console.log(url.redirectUrl);
 
-    // Concatenation of http in the url if it doesn't exist
+    // Concatenation of http in the url if it doesn't have any protocol
     const redirectUrl =
       url.redirectUrl.startsWith("http://") ||
       url.redirectUrl.startsWith("https://")
