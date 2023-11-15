@@ -1,0 +1,11 @@
+1. create basic structure.
+2. install & import multer
+3. add proper attributes to the form
+4. define multer storage and the middleware properly
+5. then define the post route with proper name attribute in form
+6. create the folder manually which is mentioned to store data
+
+
+N.B>>>>> 
+1. create a file name string which contains the extention of the file
+     else it will be currupted.
